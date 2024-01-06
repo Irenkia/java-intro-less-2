@@ -42,8 +42,14 @@ public class Calculator {
                 result = operand1 * operand2;
                 break;
             case '/':
-                result = operand1 / operand2;
-                break;
+                if(operand2 == 0){
+                    System.out.println("Error: You cannot divide by zero.");
+                    result = 0;
+                    break;
+                }else {
+                    result = operand1 / operand2;
+                    break;
+                }
             default:
                 System.out.println("The operation was not recognized. Please re-enter.");
                 result = 0;
