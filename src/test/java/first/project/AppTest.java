@@ -70,10 +70,10 @@ public class AppTest {
         boolean isVerification = true;
 
         //when
-        isVerification = AgeVerification.verification(value);
+        isVerification = AgeVerification.isVerification(value);
 
         //then
-        assertEquals(isVerification, AgeVerification.verification(22));
+        assertEquals(isVerification, AgeVerification.isVerification(22));
     }
     @Test
     public void souldAgeVerificationFalse() {
@@ -82,10 +82,10 @@ public class AppTest {
         boolean isVerification = false;
 
         //when
-        isVerification = AgeVerification.verification(value);
+        isVerification = AgeVerification.isVerification(value);
 
         //then
-        assertEquals(isVerification, AgeVerification.verification(12));
+        assertEquals(isVerification, AgeVerification.isVerification(12));
     }
 
 }
