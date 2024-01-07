@@ -3,6 +3,7 @@ package first.project;
 import first.project.calculator.Calculator;
 import first.project.checking.CheckingNumber;
 import first.project.verification.AgeVerification;
+import first.project.weekdays.Weekdays;
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class App {
         forCalculator();
         forAgeVerification();
         forCheckingNumber();
+        forWeekdays();
     }
 
     public static boolean choice(){
@@ -60,4 +62,19 @@ public class App {
             }
         }while (choice());
     }
+    public static void forWeekdays(){
+        do{
+            System.out.println("Enter a day week (an integer): ");
+            int day;
+            boolean isEven;
+            if (scanner.hasNextInt()) {
+                day = scanner.nextInt();
+                String isDay = Weekdays.days(day);
+                System.out.println("Your day of week - " + isDay);
+            }else {
+                System.out.println("You made a mistake when entering your day of week.");
+            }
+        }while (choice());
+    }
+
 }
