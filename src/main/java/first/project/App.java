@@ -36,28 +36,28 @@ public class App {
         do{
             System.out.println("Enter an age: ");
             int age;
-            boolean isVerification = true;
+            boolean isVerification;
             if (scanner.hasNextInt()) {
                 age = scanner.nextInt();
                 isVerification = AgeVerification.isVerification(age);
+                System.out.println("Your age to watch the film is " + isVerification);
             }else {
-                System.out.println("You made a mistake when entering your age. Try again.");
+                System.out.println("You made a mistake when entering your age.");
             }
-            System.out.println("Your age to watch the film is " + isVerification);
         }while (choice());
     }
     public static void forCheckingNumber(){
         do{
             System.out.println("Enter an integer: ");
-            int number = 0;
-            boolean isEven = true;
+            int number;
+            boolean isEven;
             if (scanner.hasNextInt()) {
                 number = scanner.nextInt();
                 isEven = CheckingNumber.isNumberEven(number);
+                System.out.println("Your number " + number + " is Even? - " + isEven);
             }else {
-                System.out.println("You made a mistake when entering your number. Try again.");
+                System.out.println("You made a mistake when entering your number.");
             }
-            System.out.println("Your number " + number + " is Even? - " + isEven);
         }while (choice());
     }
 }
