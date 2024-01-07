@@ -1,6 +1,7 @@
 package first.project;
 
 import first.project.calculator.Calculator;
+import first.project.verification.AgeVerification;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -52,8 +53,8 @@ public class AppTest {
     @Test
     public void souldCalculatingDivide() {
         //given
-        int value1 = 10;
-        int value2 = 2;
+        int value1 = 102;
+        int value2 = -2;
         char operationDivide = '/';
 
         //when
@@ -61,6 +62,30 @@ public class AppTest {
 
         //then
         assertEquals(5, resultDivide);
+    }
+    @Test
+    public void souldAgeVerificationTrue() {
+        //given
+        int value = 22;
+        boolean isVerification = true;
+
+        //when
+        isVerification = AgeVerification.verification(value);
+
+        //then
+        assertEquals(isVerification, AgeVerification.verification(22));
+    }
+    @Test
+    public void souldAgeVerificationFalse() {
+        //given
+        int value = 12;
+        boolean isVerification = false;
+
+        //when
+        isVerification = AgeVerification.verification(value);
+
+        //then
+        assertEquals(isVerification, AgeVerification.verification(12));
     }
 
 }
