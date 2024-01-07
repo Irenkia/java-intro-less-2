@@ -11,7 +11,7 @@ public class AppTest {
     public void contextLoads() {
     }
     @Test
-    public void souldCalculatingPlus() {
+    public void shouldCalculatingPlus() {
         //given
         int value1 = 3;
         int value2 = 5;
@@ -24,7 +24,7 @@ public class AppTest {
         assertEquals(8, resultPlus);
     }
     @Test
-    public void souldCalculatingMinus() {
+    public void shouldCalculatingMinus() {
         //given
         int value1 = 10;
         int value2 = 6;
@@ -37,7 +37,7 @@ public class AppTest {
         assertEquals(4, resultMinus);
     }
     @Test
-    public void souldCalculatingMultiply() {
+    public void shouldCalculatingMultiply() {
         //given
         int value1 = 5;
         int value2 = 3;
@@ -50,7 +50,7 @@ public class AppTest {
         assertEquals(15, resultMultiply);
     }
     @Test
-    public void souldCalculatingDivide() {
+    public void shouldCalculatingDivide() {
         //given
         int value1 = 10;
         int value2 = 2;
