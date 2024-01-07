@@ -3,6 +3,7 @@ package first.project;
 import first.project.calculator.Calculator;
 import first.project.checking.CheckingNumber;
 import first.project.verification.AgeVerification;
+import first.project.weekdays.Weekdays;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -111,5 +112,37 @@ public class AppTest {
 
         //then
         assertEquals("number is not even", isCheckingNumber, CheckingNumber.isNumberEven(11));
+    }
+    @Test
+    public void shouldWeekdaysIsRight(){
+        //given
+        int value1 = 1;
+        int value2 = 2;
+        int value3 = 3;
+        int value4 = 4;
+        int value5 = 5;
+        int value6 = 6;
+        int value7 = 7;
+        int value8 = 22;
+
+        //when
+        String result1 = Weekdays.days(value1);
+        String result2 = Weekdays.days(value2);
+        String result3 = Weekdays.days(value3);
+        String result4 = Weekdays.days(value4);
+        String result5 = Weekdays.days(value5);
+        String result6 = Weekdays.days(value6);
+        String result7 = Weekdays.days(value7);
+        String result8 = Weekdays.days(value8);
+
+        //then
+        assertEquals("Monday", result1);
+        assertEquals("Tuesday", result2);
+        assertEquals("Wednesday", result3);
+        assertEquals("Thursday", result4);
+        assertEquals("Friday", result5);
+        assertEquals("Weekend", result6);
+        assertEquals("Weekend", result7);
+        assertEquals("There is no such a day!", result8);
     }
 }
